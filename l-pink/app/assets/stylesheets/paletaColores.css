@@ -1,0 +1,34 @@
+
+
+.morado-rosado{
+	background-color:#870058;
+}
+.rosado-fuerte{
+	background-color:#C9006E;
+}
+.gris-claro{
+	background-color:#EEE2DF;
+}
+.morado-claro{
+	background-color:#D7BCC8;
+}
+.cafe-claro{
+	background-color:#D3AB9E;
+}
+
+.blanco{
+	background-color:#FFFFFF;
+
+}
+.contain{
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1280px;
+
+  width: 85%; }
+footer.page-footer{
+	background-color:#ad1457;
+}
+ul.side-nav{
+	background-color:#D3AB9E;
+}
