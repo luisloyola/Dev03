@@ -1,7 +1,6 @@
 class UserreunionsController < ApplicationController
   before_action :set_userreunion, only: [:show, :edit, :update, :destroy]
-  belongs_to :user
-  belongs_to :reunion
+
   # GET /userreunions
   # GET /userreunions.json
   def index

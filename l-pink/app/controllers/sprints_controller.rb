@@ -1,6 +1,6 @@
 class SprintsController < ApplicationController
   before_action :set_sprint, only: [:show, :edit, :update, :destroy]
-  has_many :reunions
+  
   # GET /sprints
   # GET /sprints.json
   def index

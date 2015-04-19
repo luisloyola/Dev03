@@ -1,7 +1,6 @@
 class ReunionsController < ApplicationController
   before_action :set_reunion, only: [:show, :edit, :update, :destroy]
-  has_many :tasks
-  belongs_to :sprint
+ 
   # GET /reunions
   # GET /reunions.json
   def index
