@@ -1,0 +1,25 @@
+<%= form_for(@userreunion) do |f| %>
+  <% if @userreunion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@userreunion.errors.count, "error") %> prohibited this userreunion from being saved:</h2>
+
+      <ul>
+      <% @userreunion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :secreatrio %><br>
+    <%= f.number_field :secreatrio %>
+  </div>
+  <div class="field">
+    <%= f.label :presente %><br>
+    <%= f.text_field :presente %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tema: MyText
+  tipo: MyString
+  discusion: MyString
+  accion: MyString
+  owner: MyString
+  fechatermino: 2015-04-19
+  estado: MyString
+  baseline: 1
+
+two:
+  tema: MyText
+  tipo: MyString
+  discusion: MyString
+  accion: MyString
+  owner: MyString
+  fechatermino: 2015-04-19
+  estado: MyString
+  baseline: 1

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @task.tema %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @task.tipo %>
+</p>
+
+<p>
+  <strong>Discusion:</strong>
+  <%= @task.discusion %>
+</p>
+
+<p>
+  <strong>Accion:</strong>
+  <%= @task.accion %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @task.owner %>
+</p>
+
+<p>
+  <strong>Fechatermino:</strong>
+  <%= @task.fechatermino %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @task.estado %>
+</p>
+
+<p>
+  <strong>Baseline:</strong>
+  <%= @task.baseline %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

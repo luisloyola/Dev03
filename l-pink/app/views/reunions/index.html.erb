@@ -1,0 +1,35 @@
+<div class="contain blanco">
+<p id="notice"><%= notice %></p>
+
+<h1>Aqui se muestra el detalle de una reunion</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora de inicio</th>
+      <th>Hora de termino</th>
+      <th>Lugar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reunions.each do |reunion| %>
+      <tr>
+        <td><%= reunion.fecha %></td>
+        <td><%= reunion.horainicio %></td>
+        <td><%= reunion.horafin %></td>
+        <td><%= reunion.lugar %></td>
+        <td><%= link_to 'Show', reunion %></td>
+        <td><%= link_to 'Edit', edit_reunion_path(reunion) %></td>
+        <td><%= link_to 'Destroy', reunion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reunion', new_reunion_path %>
+</div>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @reunion.fecha %>
+</p>
+
+<p>
+  <strong>Horainicio:</strong>
+  <%= @reunion.horainicio %>
+</p>
+
+<p>
+  <strong>Horafin:</strong>
+  <%= @reunion.horafin %>
+</p>
+
+<p>
+  <strong>Lugar:</strong>
+  <%= @reunion.lugar %>
+</p>
+
+<%= link_to 'Edit', edit_reunion_path(@reunion) %> |
+<%= link_to 'Back', reunions_path %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :userreunions
+  resources :users
+  resources :tasks
+  resources :sprints
+  resources :reunions
   get 'index/home'
 
   # The priority is based upon order of creation: first created -> highest priority.
