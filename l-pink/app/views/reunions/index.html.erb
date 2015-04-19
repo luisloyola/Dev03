@@ -6,6 +6,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Fecha</th>
       <th>Hora de inicio</th>
       <th>Hora de termino</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @reunions.each do |reunion| %>
       <tr>
+        <td><%= reunion.id %></td>
         <td><%= reunion.fecha %></td>
         <td><%= reunion.horainicio %></td>
         <td><%= reunion.horafin %></td>
