@@ -10,6 +10,8 @@ class ReunionsController < ApplicationController
   # GET /reunions/1
   # GET /reunions/1.json
   def show
+    @id = params[:id];
+    @tasks = Task.where(:reunion_id => @id);
   end
 
   # GET /reunions/new

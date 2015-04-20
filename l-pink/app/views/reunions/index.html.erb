@@ -1,9 +1,10 @@
 <div class="contenido white">
   <% @reunions.each do |reunion| %>
-  <div class="reunion">Reunion <%= reunion.id %></div>
+  <div class="reunion"><%= link_to "Reunion #{reunion.id}", reunion %></div>
   <% end %>
 </div>
-<div class="contain blanco">
+
+<!-- <div class="contain blanco">
   <p id="notice"><%= notice %></p>
   <h1>Aqui se muestra el detalle de una reunion</h1>
   <table>
@@ -34,4 +35,4 @@
   </table>
   <br>
   <%= link_to 'New Reunion', new_reunion_path %>
-</div>
+</div> -->
