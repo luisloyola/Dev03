@@ -1,23 +1,41 @@
 <div class= "morado-claro">
 <br>
+
 <br>
 </div>
 <div class="contain blanco">
   <br>
   <br>
+
+
 <table class="responsive-table">
         <thead>
+          <h3>Reuniones del sprint 1 </h3>
           <tr>
             <% @reunions.each do |reunion| %>
-            <th>  <div class="waves-effect waves-light btn-large"><%= link_to "Reunion #{reunion.id}", reunion %></div>
+            <th>  <%= link_to "<div class='waves-effect waves-light btn-large'>Reunion #{reunion.id}</div>".html_safe, reunion %>
               <% end %></th>
           </tr>
         </thead>
-
+          <% @reunions.each do |reunion| %>
+           <td>
+            <% reunion.tasks.each do | task | %>
+            <a class="btn-floating btn-large waves-effect waves-light red">
+              <%= task.tipo[0,2].upcase %> <br>
+              </a><br>
+            <% end %>
+           </td>  
+            <% end %>
         <tbody>
 
         </tbody>
       </table>
+
+<h5> AC:Acuerdo </h5>
+<h5> DE:Desacuerdo</h5>
+<h5> CO:Compromiso</h5>
+<h5> DU:Dudas</h5>
+<br>
 </div>
 
 <div class= "morado-claro">

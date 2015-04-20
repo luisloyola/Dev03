@@ -5,6 +5,7 @@ class ReunionsController < ApplicationController
   # GET /reunions.json
   def index
     @reunions = Reunion.all
+    @tasks = Task.all
   end
 
   # GET /reunions/1

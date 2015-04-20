@@ -2,45 +2,12 @@
 <br>
 <br>
 </div>
-<div class="contain blanco">
-<br>
-<br>
-
-<table class="responsive-table">
-        <thead>
-          <tr>
-           
-            <th>  <div class="waves-effect waves-light btn-large"> Reunión</div>
-             </th>
-          </tr>
-        </thead>
-<% @tasks.each do |reunion| %>
-          <tr>
-            <td>
-              <!--Meter codigo ruby para solo mostrar las iniciales -->
-              <a class="btn-floating btn-large waves-effect waves-light red">
-                <%= reunion.tipo %> <br>
-              </a>
-            </td>
-          </tr>
-<% end %>
-        <tbody>
-
-        </tbody>
-      </table>
-
-</div>
-
-
-<div class= "morado-claro">
-  <br>
-  <br>
-</div>
-
 
 <div class="contain blanco">
+  <br>
+  <br>
 <p id="notice"><%= notice %></p>
-<table class="responsive-table-hoverable">
+<table class="responsive-table-striped">
     <thead>
       <tr>
         <th>id</th>
@@ -64,6 +31,8 @@
   </tbody>
 </table>
 
+
+
 </div>
 
 
@@ -71,5 +40,4 @@
 
 
 
-<%= link_to 'Edit', edit_reunion_path(@reunion) %> |
 <%= link_to 'Back', reunions_path %>
