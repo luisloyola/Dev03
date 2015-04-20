@@ -1,16 +1,36 @@
-<div class="contenido white">
-  <% @reunions.each do |reunion| %>
-  <div class="reunion"><%= link_to "Reunion #{reunion.id}", reunion %></div>
-  <% end %>
+<div class= "morado-claro">
+<br>
+<br>
+</div>
+<div class="contain blanco">
+  <br>
+  <br>
+<table class="responsive-table">
+        <thead>
+          <tr>
+            <% @reunions.each do |reunion| %>
+            <th>  <div class="waves-effect waves-light btn-large"><%= link_to "Reunion #{reunion.id}", reunion %></div>
+              <% end %></th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+      </table>
 </div>
 
-<!-- <div class="contain blanco">
+<div class= "morado-claro">
+
+</div>
+
+
+ <div class="contain blanco">
   <p id="notice"><%= notice %></p>
-  <h1>Aqui se muestra el detalle de una reunion</h1>
-  <table>
+  <table class="responsive-table-hoverable">
     <thead>
       <tr>
-        <th></th>
+        <th>Reunión</th>
         <th>Fecha</th>
         <th>Hora de inicio</th>
         <th>Hora de termino</th>
@@ -21,18 +41,19 @@
     <tbody>
       <% @reunions.each do |reunion| %>
       <tr>
-        <td><%= reunion.id %></td>
+        <td>Reunión <%= reunion.id %></td>
         <td><%= reunion.fecha %></td>
         <td><%= reunion.horainicio %></td>
         <td><%= reunion.horafin %></td>
         <td><%= reunion.lugar %></td>
-        <td><%= link_to 'Show', reunion %></td>
+        <!--<td><%= link_to 'Show', reunion %></td>
         <td><%= link_to 'Edit', edit_reunion_path(reunion) %></td>
-        <td><%= link_to 'Destroy', reunion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', reunion, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
       <% end %>
     </tbody>
   </table>
   <br>
-  <%= link_to 'New Reunion', new_reunion_path %>
-</div> -->
+ <!--
+ <%= link_to 'New Reunion', new_reunion_path %> -->
+</div> 

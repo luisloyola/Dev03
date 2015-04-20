@@ -1,25 +1,46 @@
+<div class= "morado-claro">
+<br>
+<br>
+</div>
+<div class="contain blanco">
+<br>
+<br>
+
+<table class="responsive-table">
+        <thead>
+          <tr>
+           
+            <th>  <div class="waves-effect waves-light btn-large"> Reunión</div>
+             </th>
+          </tr>
+        </thead>
+<% @tasks.each do |reunion| %>
+          <tr>
+            <td>
+              <!--Meter codigo ruby para solo mostrar las iniciales -->
+              <a class="btn-floating btn-large waves-effect waves-light red">
+                <%= reunion.tipo %> <br>
+              </a>
+            </td>
+          </tr>
+<% end %>
+        <tbody>
+
+        </tbody>
+      </table>
+
+</div>
+
+
+<div class= "morado-claro">
+  <br>
+  <br>
+</div>
+
+
+<div class="contain blanco">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @reunion.fecha %>
-</p>
-
-<p>
-  <strong>Horainicio:</strong>
-  <%= @reunion.horainicio %>
-</p>
-
-<p>
-  <strong>Horafin:</strong>
-  <%= @reunion.horafin %>
-</p>
-
-<p>
-  <strong>Lugar:</strong>
-  <%= @reunion.lugar %>
-</p>
-<table>
+<table class="responsive-table-hoverable">
     <thead>
       <tr>
         <th>id</th>
@@ -30,18 +51,25 @@
         <th colspan="3"></th>
       </tr>
     </thead>
-	<tbody>
-	      <% @tasks.each do |reunion| %>
-	      <tr>
-	        <td><%= reunion.id %></td>
-	        <td><%= reunion.tema %></td>
-	        <td><%= reunion.tipo %></td>
-	        <td><%= reunion.discusion %></td>
-	        <td><%= reunion.accion %></td>
-	      </tr>
-	      <% end %>
-	</tbody>
+  <tbody>
+        <% @tasks.each do |reunion| %>
+        <tr>
+          <td><%= reunion.id %></td>
+          <td><%= reunion.tema %></td>
+          <td><%= reunion.tipo %></td>
+          <td><%= reunion.discusion %></td>
+          <td><%= reunion.accion %></td>
+        </tr>
+        <% end %>
+  </tbody>
 </table>
+
+</div>
+
+
+
+
+
 
 <%= link_to 'Edit', edit_reunion_path(@reunion) %> |
 <%= link_to 'Back', reunions_path %>
