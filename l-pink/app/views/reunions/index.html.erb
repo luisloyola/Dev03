@@ -1,51 +1,13 @@
 <div class= "morado-claro">
-<br>
-
-<br>
-</div>
-<div class="contain blanco">
   <br>
   <br>
-
-
-<table class="responsive-table">
-        <thead>
-          <h3>Reuniones del sprint 1 </h3>
-          <tr>
-            <% @reunions.each do |reunion| %>
-            <th>  <%= link_to "<div class='waves-effect waves-light btn-large'>Reunion #{reunion.id}</div>".html_safe, reunion %>
-              <% end %></th>
-          </tr>
-        </thead>
-          <% @reunions.each do |reunion| %>
-           <td>
-            <% reunion.tasks.each do | task | %>
-            <a class="btn-floating btn-large waves-effect waves-light red">
-              <%= task.tipo[0,2].upcase %> <br>
-              </a><br>
-            <% end %>
-           </td>  
-            <% end %>
-        <tbody>
-
-        </tbody>
-      </table>
-
-<h5> AC:Acuerdo </h5>
-<h5> DE:Desacuerdo</h5>
-<h5> CO:Compromiso</h5>
-<h5> DU:Dudas</h5>
-<br>
 </div>
-
-<div class= "morado-claro">
-
-</div>
-
-
+ <div id="modal1" class="modal">
+    <div class="modal-content">
+     
  <div class="contain blanco">
   <p id="notice"><%= notice %></p>
-  <table class="responsive-table-hoverable">
+  <table class="responsive-table-hoverable-centered">
     <thead>
       <tr>
         <th>Reunión</th>
@@ -64,14 +26,68 @@
         <td><%= reunion.horainicio %></td>
         <td><%= reunion.horafin %></td>
         <td><%= reunion.lugar %></td>
-        <!--<td><%= link_to 'Show', reunion %></td>
-        <td><%= link_to 'Edit', edit_reunion_path(reunion) %></td>
-        <td><%= link_to 'Destroy', reunion, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
       <% end %>
     </tbody>
   </table>
-  <br>
- <!--
- <%= link_to 'New Reunion', new_reunion_path %> -->
+
 </div> 
+
+    
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Volver</a>
+    </div>
+  </div>
+
+
+
+<br>
+</div>
+<div class="contain blanco">
+  <br>
+  <br>
+
+
+<table class="responsive-table">
+        <thead>
+          <h3>Reuniones del sprint 1 </h3>
+          <tr>
+            <% @reunions.each do |reunion| %>
+            <th>  <%= link_to "<div class='waves-effect waves-light purple- btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
+              <% end %></th>
+          </tr>
+        </thead>
+            <tbody>
+          <% @reunions.each do |reunion| %>
+           <td>
+            <% reunion.tasks.each do | task | %>
+            <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
+             <br>
+              <br>
+            <% end %>
+           </td>  
+            <% end %>
+    
+
+        </tbody>
+      </table>
+
+
+
+ <a class="waves-effect waves-light btn modal-trigger" href="#modal1"> Mostrar Todas las reuniones</a>
+<br>
+<br>
+<h6> AC:Acuerdo </h6>
+<h6> DE:Desacuerdo</h6>
+<h6> CO:Compromiso</h6>
+<h6> DU:Dudas</h6>
+<br>
+</div>
+
+
+<div class= "morado-claro">
+
+</div>
+
+
+
