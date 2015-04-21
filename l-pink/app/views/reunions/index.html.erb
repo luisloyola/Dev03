@@ -44,21 +44,28 @@
       <h3>Reuniones del sprint 1 </h3>
       <tr>
         <% @reunions.each do |reunion| %>
-        <th>  <%= link_to "<div class='waves-effect waves-light purple- btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
-      <% end %></th>
+        <th>  <%= link_to "<div class='waves-effect waves-light btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
+        <% end %>
+      </th>
     </tr>
   </thead>
   <tbody>
+    <div class='waves-effect waves-light btn-large btn-acuerdo'>Acuerdo</div>
+    <div class='waves-effect waves-light btn-large btn-compromiso'>Compromiso</div>
+    <div class='waves-effect waves-light btn-large btn-quitar'>Quitar filtro</div>
     <% @reunions.each do |reunion| %>
-    <td>
-      <% reunion.tasks.each do | task | %>
-      <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
-      <br>
-      <br>
-      <% end %>
-    </td>
+      <td>
+        <% reunion.tasks.each do | task | %>
+        <% if task.tipo == "Compromiso" %>
+          <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red task compromiso'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
+        <% elsif task.tipo == "Acuerdo" %>
+          <%= link_to "<div class='btn-floating btn-large waves-effect waves-light blue task acuerdo'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
+        <% end %>
+        <br>
+        <br>
+        <% end %>
+      </td>
     <% end %>
-    
   </tbody>
 </table>
 <a class="waves-effect waves-light btn modal-trigger" href="#modal1"> Mostrar Todas las reuniones</a>
