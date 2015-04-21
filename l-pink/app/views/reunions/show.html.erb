@@ -1,13 +1,35 @@
 <div class= "morado-claro">
-<br>
-<br>
+  <br>
+  <br>
+  <h3>Reunion <%= @reunion.id %></h3>
 </div>
-
 <div class="contain blanco">
+  <table class="responsive-table-hoverable-centered">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora Inicio</th>
+        <th>Hora Termino</th>
+        <th>Lugar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @reunion.fecha %></td>
+        <td><%= @reunion.horainicio %></td>
+        <td><%= @reunion.horafin %></td>
+        <td><%= @reunion.lugar %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class= "morado-claro">
   <br>
   <br>
-<p id="notice"><%= notice %></p>
-<table class="responsive-table-hoverable-centered">
+  <h3>Tareas Asociada</h3>
+</div>
+<div class="contain blanco">
+  <table class="responsive-table-hoverable-centered">
     <thead>
       <tr>
         <th>Tema</th>
@@ -17,32 +39,21 @@
         <th>Owner</th>
         <th>Estado</th>
         <th>Baseline</th>
-        <th colspan="3"></th>
       </tr>
     </thead>
-  <tbody>
-        <% @tasks.each do |reunion| %>
-        <tr>
-          
-          <td><%= reunion.tema %></td>
-          <td><%= reunion.tipo %></td>
-          <td><%= reunion.discusion %></td>
-          <td><%= reunion.accion %></td>
-          <td><%= reunion.owner %></td>
-          <td><%= reunion.estado %></td>
-          <td><%= reunion.baseline %></td>
-        </tr>
-        <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'Volver', reunions_path %>
-
+    <tbody>
+      <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.tema %></td>
+        <td><%= task.tipo %></td>
+        <td><%= task.discusion %></td>
+        <td><%= task.accion %></td>
+        <td><%= task.owner %></td>
+        <td><%= task.estado %></td>
+        <td><%= task.baseline %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Volver', reunions_path %>
 </div>
-
-
-
-
-
-
-

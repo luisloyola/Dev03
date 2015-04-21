@@ -12,6 +12,7 @@ class ReunionsController < ApplicationController
   # GET /reunions/1.json
   def show
     @id = params[:id];
+    @reunion = Reunion.find(@id);
     @tasks = Task.where(:reunion_id => @id);
   end
 

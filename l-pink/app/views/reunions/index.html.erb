@@ -2,79 +2,66 @@
   <br>
   <br>
 </div>
- <div id="modal1" class="modal">
-    <div class="modal-content">
-     
- <div class="contain blanco">
-  <p id="notice"><%= notice %></p>
-  <table class="responsive-table-hoverable-centered">
-    <thead>
-      <tr>
-        <th>Reunión</th>
-        <th>Fecha</th>
-        <th>Hora de inicio</th>
-        <th>Hora de termino</th>
-        <th>Lugar</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @reunions.each do |reunion| %>
-      <tr>
-        <td>Reunión <%= reunion.id %></td>
-        <td><%= reunion.fecha %></td>
-        <td><%= reunion.horainicio %></td>
-        <td><%= reunion.horafin %></td>
-        <td><%= reunion.lugar %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-</div> 
-
-    
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="contain blanco">
+      <p id="notice"><%= notice %></p>
+      <table class="responsive-table-hoverable-centered">
+        <thead>
+          <tr>
+            <th>Reunión</th>
+            <th>Fecha</th>
+            <th>Hora de inicio</th>
+            <th>Hora de termino</th>
+            <th>Lugar</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @reunions.each do |reunion| %>
+          <tr>
+            <td>Reunión <%= reunion.id %></td>
+            <td><%= reunion.fecha %></td>
+            <td><%= reunion.horainicio %></td>
+            <td><%= reunion.horafin %></td>
+            <td><%= reunion.lugar %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Volver</a>
     </div>
   </div>
-
-
-
-<br>
+  <br>
 </div>
 <div class="contain blanco">
   <br>
   <br>
-
-
-<table class="responsive-table">
-        <thead>
-          <h3>Reuniones del sprint 1 </h3>
-          <tr>
-            <% @reunions.each do |reunion| %>
-            <th>  <%= link_to "<div class='waves-effect waves-light purple- btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
-              <% end %></th>
-          </tr>
-        </thead>
-            <tbody>
-          <% @reunions.each do |reunion| %>
-           <td>
-            <% reunion.tasks.each do | task | %>
-            <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
-             <br>
-              <br>
-            <% end %>
-           </td>  
-            <% end %>
+  <table class="responsive-table">
+    <thead>
+      <h3>Reuniones del sprint 1 </h3>
+      <tr>
+        <% @reunions.each do |reunion| %>
+        <th>  <%= link_to "<div class='waves-effect waves-light purple- btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
+      <% end %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reunions.each do |reunion| %>
+    <td>
+      <% reunion.tasks.each do | task | %>
+      <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
+      <br>
+      <br>
+      <% end %>
+    </td>
+    <% end %>
     
-
-        </tbody>
-      </table>
-
-
-
- <a class="waves-effect waves-light btn modal-trigger" href="#modal1"> Mostrar Todas las reuniones</a>
+  </tbody>
+</table>
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1"> Mostrar Todas las reuniones</a>
 <br>
 <br>
 <h6> AC:Acuerdo </h6>
@@ -83,11 +70,5 @@
 <h6> DU:Dudas</h6>
 <br>
 </div>
-
-
 <div class= "morado-claro">
-
 </div>
-
-
-
