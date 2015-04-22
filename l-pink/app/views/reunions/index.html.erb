@@ -50,29 +50,21 @@
     </tr>
   </thead>
   <tbody>
-    <!-- 
-    <div class='waves-effect waves-light btn-large btn-acuerdo'>Acuerdo</div>
-    <div class='waves-effect waves-light btn-large btn-compromiso'>Compromiso</div>
-    <div class='waves-effect waves-light btn-large btn-quitar'>Quitar filtro</div>-->
     <% @reunions.each do |reunion| %>
-      <td>
-        <% reunion.tasks.each do | task | %>
-        <% if task.tipo == "Compromiso" %>
-        <div class= "center-align">
-
-
-          <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red task compromiso-center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %> 
-        </div>
-
-        <% elsif task.tipo == "Acuerdo" %>
-          <div class= "center-align">
-          <%= link_to "<div class='btn-floating btn-large waves-effect waves-light blue task acuerdo-center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,reunion %>
-           </div>
-        <% end %>
-        
-        <br>
-        <% end %>
-      </td>
+    <td>
+      <% reunion.tasks.each do | task | %>
+      <% if task.tipo == "Compromiso" %>
+      <div class= "center-align">
+        <%= link_to "<div class='btn-floating btn-large waves-effect waves-light red center-block'>CO</div>".html_safe, task %>
+      </div>
+      <% elsif task.tipo == "Acuerdo" %>
+      <div class= "center-align">
+        <%= link_to "<div class='btn-floating btn-large waves-effect waves-light blue center-block'>AC</div>".html_safe, task %>
+      </div>
+      <% end %>
+      <br>
+      <% end %>
+    </td>
     <% end %>
   </tbody>
 </table>
