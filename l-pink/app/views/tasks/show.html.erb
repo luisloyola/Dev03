@@ -2,23 +2,24 @@
   <br>
   <br>
 </div>
+
 <div class="contain blanco">
   <br>
   <br>
-  <h4 class= "center-align"> Tarea <%=@task.id%></h4>
-  <br>
-  <br>
+   <h4 class= "center-align"> Descripción elemento dialógico</h4>
+   <div class='btn-floating btn-large waves-effect waves-light green task acuerdo-center-block'>#{ task.tipo[0,2].upcase}</div>
+   <br>
+   <br>
   <table class="responsive-table-hoverable-centered">
     <thead>
       <tr>
         <th>Tema</th>
         <th>Tipo</th>
         <th>Discusion</th>
-        <th>Accion</th>
+        <th>Acción</th>
         <th>Owner</th>
-        <th>Fecha termino</th>
         <th>Estado</th>
-        <th>Baseline</th>
+        <th>Rebaseline</th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +29,6 @@
         <td><%= @task.discusion %></td>
         <td><%= @task.accion %></td>
         <td><%= @task.owner %></td>
-        <td><%= @task.fechatermino %></td>
         <td><%= @task.estado %></td>
         <td><%= @task.baseline %></td>
       </tr>
@@ -36,5 +36,29 @@
   </table>
   <br>
   <br>
-  <%= link_to 'Volver', reunions_path %>
+  
 </div>
+
+
+<div class= "morado-claro">
+  <br>
+  <br>
+</div>
+<div class="contain blanco">
+   <br>
+  <br>
+   <h4 class= "center-align"> Aquí se muestra la relación con otros elementos VIZ</h4>
+   <br>
+   <br>
+<%= link_to 'Volver', reunions_path %>
+  <br>
+  <br>
+</div>
+
+
+
+
+
+
+
+
