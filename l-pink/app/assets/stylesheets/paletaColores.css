@@ -29,7 +29,10 @@
   max-width: 1280px;
   width: 85%; 
 }
-
+.center-block { 
+	display: block; 
+	margin-right: auto; 
+	margin-left: auto; }
 footer.page-footer{
 	background-color:#ad1457;
 }

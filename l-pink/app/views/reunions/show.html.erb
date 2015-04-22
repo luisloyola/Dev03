@@ -1,9 +1,12 @@
 <div class= "morado-claro">
   <br>
   <br>
-  <h3>Reunion <%= @reunion.id %></h3>
+  
 </div>
 <div class="contain blanco">
+   <br>
+  <br>
+   <h4 class= "center-align"> Reunión <%=@reunion.id%></h4>
   <table class="responsive-table-hoverable-centered">
     <thead>
       <tr>
@@ -26,9 +29,14 @@
 <div class= "morado-claro">
   <br>
   <br>
-  <h3>Tareas Asociada</h3>
 </div>
+
 <div class="contain blanco">
+  <br>
+  <br>
+   <h4 class= "center-align"> Elementos dialogicos de la reunión <%=@reunion.id%></h4>
+   <br>
+   <br>
   <table class="responsive-table-hoverable-centered">
     <thead>
       <tr>
@@ -55,5 +63,7 @@
       <% end %>
     </tbody>
   </table>
+  <br>
+  <br>
   <%= link_to 'Volver', reunions_path %>
 </div>
