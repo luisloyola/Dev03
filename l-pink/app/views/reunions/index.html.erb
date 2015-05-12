@@ -38,10 +38,12 @@
 </div>
 <div class="contain blanco">
   <br>
-  <br>
+  <br>  
   <table class="responsive-table">
-    <thead>
+    <thead class"reuniones">
       <h3>Reuniones del sprint 1 </h3>
+      <button class="btn-ocultar-grafos" type="button">ocultar grafos</button>
+      <button class="btn-mostrar-grafos" type="button">mostrar grafos</button>
       <tr>
         <% @reunions.each do |reunion| %>
         <th>  <%= link_to "<div class='waves-effect waves-light pink btn-large'>Reunion#{reunion.id}</div>".html_safe, reunion %>
@@ -49,7 +51,7 @@
       </th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="grafos">    
     <!--
     <div class='waves-effect waves-light btn-large btn-acuerdo'>Acuerdo</div>
     <div class='waves-effect waves-light btn-large btn-compromiso'>Compromiso</div>

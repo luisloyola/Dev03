@@ -5,6 +5,7 @@
 $(document).ready ->
   
   $('.btn-ocultar').hide()
+  $('.btn-mostrar-grafos').hide()
   $('.panel').hide()
 
   $('.btn-ocultar').click ->
@@ -18,5 +19,17 @@ $(document).ready ->
     $('.btn-ocultar').show()
     $('.panel').show()
     return    
+
+  $('.btn-ocultar-grafos').click ->
+    $('.btn-mostrar-grafos').show()
+    $('.grafos').hide()
+    $('.btn-ocultar-grafos').hide()
+    return
+
+  $('.btn-mostrar-grafos').click ->
+    $('.btn-mostrar-grafos').hide()
+    $('.grafos').show()
+    $('.btn-ocultar-grafos').show()
+    return  
     
   return
