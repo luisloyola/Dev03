@@ -1,98 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/paletaColores.css"  media="screen,projection"/>
-<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css","bootstrap-wysihtml5" , "paletaColores", "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"%>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'https://code.jquery.com/jquery-2.1.1.min.js' %>
-<%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js' %>
-<%= javascript_include_tag 'wysihtml-toolbar.min.js' %>
-<%= javascript_include_tag 'advanced_and_extended.js' %>
-
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/paletaColores.css"  media="screen,projection"/>
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css","bootstrap-wysihtml5" , "paletaColores", "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-2.1.1.min.js' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js' %>
+    <%= javascript_include_tag 'wysihtml-toolbar.min.js' %>
+    <%= javascript_include_tag 'advanced_and_extended.js' %>
   </head>
-
-
-
-
   <body  class= "morado-claro">
     <nav  class="morado-rosado">
-  <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-    <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#!">First</a></li>
-              <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
-            </ul>
-          </div>
+      <ul id="slide-out" class="side-nav">
+        <li><a href="#!">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!">First</a></li>
+                  <li><a href="#!">Second</a></li>
+                  <li><a href="#!">Third</a></li>
+                  <li><a href="#!">Fourth</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </li>
+        <li></li>
+        <br>
+        <div class="center-align"><%= image_tag "logo3.png", :class => "responsive-img adaptarLogo2", :title => "logo"%></div>
       </ul>
-    </li>
-    <li></li>
-    <br>
-     <div class="center-align"><%= image_tag "logo3.png", :class => "responsive-img adaptarLogo2", :title => "logo"%></div>
-  </ul>
- <div class="menupad">
-    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-    <a href="#" class="brand-logo"> <img src="img/logo4.png" alt="" class="responsive-img adaptarLogo"></a>  
-</div>
-      
-</nav>
-   
-  
+      <div class="menupad">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+        <a href="#" class="brand-logo"> <img src="img/logo4.png" alt="" class="responsive-img adaptarLogo"></a>
+      </div>      
+    </nav>
+        
     <%= yield %>
-
-     <script>
-   $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-</script>
-  <script type="text/javascript">
-  $('.button-collapse').sideNav({
+    <script>
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+    </script>
+    <script type="text/javascript">
+    $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 240
       edge: 'right', // Choose the horizontal origin
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
-
+    });
     </script>
-
-
   </body>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-    <div class="footer-copyright ">
+    <footer class="page-footer">
       <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
- 
+      <div class="footer-copyright ">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
 </html>
-

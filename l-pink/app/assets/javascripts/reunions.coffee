@@ -3,19 +3,20 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+  
+  $('.btn-ocultar').hide()
+  $('.panel').hide()
 
-  $('.btn-compromiso').click ->
-    $('.task').hide()
-    $('.compromiso').show()
-    return
+  $('.btn-ocultar').click ->
+    $('.btn-ocultar').hide()
+    $('.panel').hide()
+    $('.btn-mostrar').show()
+    return  
 
-  $('.btn-acuerdo').click ->
-    $('.task').hide()
-    $('.acuerdo').show()
-    return
-
-  $('.btn-quitar').click ->
-    $('.task').show()
-    return
+  $('.btn-mostrar').click ->
+    $('.btn-mostrar').hide()
+    $('.btn-ocultar').show()
+    $('.panel').show()
+    return    
     
   return
