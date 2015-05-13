@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('.interactuar').tooltipster({
+        contentAsHTML: true,
+        interactive: false, //Cambiar a true en caso de querer seleccionar algo del tooltip
+        animation: 'grow',
+        theme: '.tooltipster-shadow'
+    });
+});

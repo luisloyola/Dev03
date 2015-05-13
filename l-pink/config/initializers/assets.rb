@@ -9,6 +9,8 @@ Rails.application.config.assets.precompile += %w( font-awesome.min.css )
 Rails.application.config.assets.precompile += %w( materialize.min.js ) 
 Rails.application.config.assets.precompile += %w( wysihtml-toolbar.min.js ) 
 Rails.application.config.assets.precompile += %w( advanced_and_extended.js )
+Rails.application.config.assets.precompile += %w( jquery.tooltipster.min.js )
+Rails.application.config.assets.precompile += %w( tooltipster.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

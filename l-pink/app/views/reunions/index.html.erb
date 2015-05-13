@@ -61,19 +61,19 @@
       <% reunion.tasks.each do | task | %>
       <% if task.tipo == "Compromiso" %>
       <div class= "center-align">
-        <%= link_to "<div id='co_#{task.id}' class='btn-floating btn-large waves-effect waves-light red task nodo center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
+        <%= link_to "<div id='co_#{task.id}' class='btn-floating btn-large waves-effect waves-light red task nodo center-block tooltip interactuar' title = 'CO #{reunion.id}.X <p> Tema: #{task.tema} <br> Tipo: #{task.tipo} <br> Deadline: #{task.fechatermino} </p>'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
       </div>
       <% elsif task.tipo == "Acuerdo" %>
       <div class= "center-align">
-        <%= link_to "<div id='ac_#{task.id}' class='btn-floating btn-large waves-effect waves-light blue task nodo center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
+        <%= link_to "<div id='ac_#{task.id}' class='btn-floating btn-large waves-effect waves-light blue task nodo center-block tooltip interactuar' title = 'AC #{reunion.id}.X <p> Tema: #{task.tema} <br> Tipo: #{task.tipo} <br> Deadline: #{task.fechatermino} </p>'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
       </div>
       <% elsif task.tipo == "Duda" %>
       <div class= "center-align">
-        <%= link_to "<div id='du_#{task.id}' class='btn-floating btn-large waves-effect waves-light green task nodo center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
+        <%= link_to "<div id='du_#{task.id}' class='btn-floating btn-large waves-effect waves-light green task nodo center-block tooltip interactuar' title = 'DU #{reunion.id}.X <p> Tema: #{task.tema} <br> Tipo: #{task.tipo} <br> Deadline: #{task.fechatermino} </p>'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
       </div>
       <% elsif task.tipo == "Desacuerdo" %>
       <div class= "center-align">      
-        <%= link_to "<div id='de_#{task.id}' class='btn-floating btn-large waves-effect waves-light yellow task nodo center-block'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
+        <%= link_to "<div id='de_#{task.id}' class='btn-floating btn-large waves-effect waves-light yellow task nodo center-block tooltip interactuar' title = 'DE #{reunion.id}.X <p> Tema: #{task.tema} <br> Tipo: #{task.tipo} <br> Deadline: #{task.fechatermino} </p>'>#{ task.tipo[0,2].upcase}</div>".html_safe ,task %>
       </div>
       <% end %>
       
